@@ -5,7 +5,6 @@ import AsyncStorage from '@react-native-community/async-storage';
 
 
 import { UserContext } from '../../contexts/UserContext';
-
 import {
     Container,
     InputArea,
@@ -24,7 +23,8 @@ import EmailIcon from '../../assets/email.svg';
 import LockIcon from '../../assets/lock.svg';
 
 export default () => {
-    const { dispatch: userDispatch } = useContext(UserContext);
+    //const { dispatch: userDispatch } = useContext(UserContext);
+    const global =useContext(UserContext)
     const navigation = useNavigation();
 
     const [emailField, setEmailField] = useState('');
@@ -65,7 +65,7 @@ export default () => {
 
     return (
         <Container>
-            <Image source={require('../../assets/logo.jpg')} width="100%" height="100"/>
+            <Image source={require('../../assets/logo.jpg')} width="100%" height="80"/>
 
             <InputArea>
                 <SignInput

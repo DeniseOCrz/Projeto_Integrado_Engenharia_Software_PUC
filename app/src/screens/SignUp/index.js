@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Image } from "react-native";
 import { useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-community/async-storage';
@@ -64,7 +64,7 @@ export default () => {
 
     return (
         <Container>
-            <Image source={require('../../assets/logo.jpg')} width="100%" height="100"/>
+            <Image source={require('../../assets/logo.jpg')} width="100%" height="70"/>
 
             <InputArea>
                 <SignInput
